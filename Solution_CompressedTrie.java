@@ -19,7 +19,7 @@ public class Solution_CompressedTrie {
 		int numberOfOperations = Integer.parseInt(stringTokenizer.nextToken());
 		int currentOperation = 0;
 		Trie trie = new Trie();
-		long start = System.nanoTime();
+
 		while (currentOperation < numberOfOperations) {
 			stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 			String operation = stringTokenizer.nextToken();
@@ -32,15 +32,6 @@ public class Solution_CompressedTrie {
 				bufferedWriter.write(total + "\n");
 			}
 			currentOperation++;
-
-			if (currentOperation == numberOfOperations - 10) {
-
-				long end = System.nanoTime();
-				long time = end - start;
-				System.out.println("CT GitHub: " + time);
-				System.exit(-1);
-			}
-
 		}
 
 		bufferedReader.close();
